@@ -57,7 +57,6 @@ func newTermReader(t *terminal.Terminal, f *os.File) (reader Reader, err error) 
 }
 
 func (r termReader) Close() (err error) {
-	r.t.Write([]byte{'\r', '\n'})
 	err = terminal.Restore(int(r.f.Fd()), r.s)
 	r.f.Close()
 	return
