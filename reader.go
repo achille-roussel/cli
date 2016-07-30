@@ -106,7 +106,7 @@ func (r fileReader) ReadLine(prompt string) (line string, err error) {
 			err = nil
 		}
 	}
-
+	line = trimLine(line)
 	return
 }
 
