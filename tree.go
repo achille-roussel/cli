@@ -21,7 +21,6 @@ func (t *Tree) Nodes() []TreeView {
 
 type TreeIndent struct {
 	s []rune
-	d int
 }
 
 func NewTreeIndent() *TreeIndent {
