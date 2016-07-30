@@ -69,13 +69,12 @@ func (r termReader) ReadLine(prompt string) (line string, err error) {
 		err = nil
 	}
 
-	line = trimLine(line)
-
 	if err == io.EOF {
 		r.t.SetPrompt("")
 		r.t.Write(append([]byte(prompt), '\r', '\n'))
 	}
 
+	line = trimLine(line)
 	return
 }
 
